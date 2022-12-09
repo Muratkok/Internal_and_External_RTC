@@ -31,7 +31,7 @@ extern "C" {
 #include "string.h"
 
 /* USER CODE BEGIN Includes */
-#define MILLENNIUM 2000
+//#define MILLENNIUM 2000
 /* USER CODE END Includes */
 
 extern RTC_HandleTypeDef hrtc;
@@ -39,15 +39,16 @@ extern char time[20];
 
 
 //void set_time (void);
-void adjustInternalRTC(void);
-void set_time (RTC_TimeTypeDef *sTime,RTC_DateTypeDef *sDate);
-void get_current_RTC(void); 
+//void adjustInternalRTC(void);
+//void set_time (RTC_TimeTypeDef *sTime,RTC_DateTypeDef *sDate);
+//void get_current_RTC(void); 
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
 
 void MX_RTC_Init(void);
-
+void HAL_RTC_MspInit(RTC_HandleTypeDef* rtcHandle);
+void HAL_RTC_MspDeInit(RTC_HandleTypeDef* rtcHandle);
 /* USER CODE BEGIN Prototypes */
 
 /* USER CODE END Prototypes */
